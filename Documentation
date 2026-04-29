@@ -1,0 +1,76 @@
+** Project Title:
+
+Hotel Reservation System
+
+** Project Overview:
+
+The Hotel Reservation System is a Java-based console application that allows users to search, book, cancel, and manage hotel rooms.
+This system was developed as part of the CodeAlpha Internship to demonstrate skills in Object-Oriented Programming (OOP), JDBC, and MySQL database integration.
+
+The system provides complete room management, booking tracking, and payment simulation.
+
+** Objectives of the Project:
+To design a hotel management system using OOP principles.
+To use MySQL database for storing room and booking details.
+To allow users to perform operations such as Search, Book, Cancel, and View bookings.
+To simulate a real-time hotel reservation process.
+To implement persistent storage using JDBC.
+** Features Implemented:
+1. Search Available Rooms
+
+Users can view all available rooms with:
+
+Room ID
+Category (Standard / Deluxe / Suite)
+Price
+2. Book a Room
+Customer enters their name
+Selects a room
+Payment simulation is shown
+Booking is stored in the database
+Room availability automatically updates
+3. Cancel a Booking
+User enters Booking ID
+System deletes booking and updates room availability
+4. View All Bookings
+
+Displays full booking details:
+
+Booking ID
+Customer Name
+Room ID
+Booking Date
+Payment Status
+** Technologies Used:
+Java (Core + OOP)
+JDBC
+MySQL Database
+Collections Framework
+** Database Structure:
+
+Two tables were used:
+
+1. rooms
+Column	Type	Description
+room_id	INT	Unique ID
+category	VARCHAR	Room Type
+price	DOUBLE	Room Price
+is_available	BOOLEAN	Availability
+2. bookings
+Column	Type	Description
+booking_id	INT (Auto)	Primary Key
+customer_name	VARCHAR	Name of customer
+room_id	INT	Linked with rooms table
+booking_date	VARCHAR	Date of booking
+payment_status	VARCHAR	Success / Pending
+
+** Working Process:
+System connects to MySQL using JDBC
+User selects an option from menu
+Based on user choice, system performs CRUD operations on database:
+SELECT (search and view)
+INSERT (book room)
+DELETE (cancel booking)
+UPDATE (availability)
+Results are displayed on console
+Database ensures data is stored permanently
